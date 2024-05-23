@@ -1,20 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./style.css"; // Make sure to include relevant styles
 
 const VidSrcPlayer = ({ mediaType, id }) => {
-    const url = `https://vidsrc.in/embed/${mediaType}/${id}`;
-    console.log("VidSrcPlayer URL:", url);
+    const url = `https://vidsrc.me/embed/${mediaType}/${id}`;
+    
 
     return (
         <div className="vidsrc-player">
             <iframe
                 src={url}
+                referrerPolicy="origin"
                 width="100%"
                 height="500px"
                 frameBorder="0"
                 allowFullScreen
                 title="VidSrc Player"
-                onError={(e) => console.error('Iframe load error', e)}
             ></iframe>
         </div>
     );
