@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./style.css"; // Make sure to include relevant styles
+import "./style.scss"; // Make sure to include relevant styles
 
 const VidSrcPlayer = ({ mediaType, id }) => {
     const url = `https://vidsrc.me/embed/${mediaType}/${id}`;
