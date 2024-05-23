@@ -162,7 +162,7 @@ const DetailsBanner = ({ video, crew }) => {
                                             </div>
                                         )}
 
-                                        {writer?.length > 0 && (
+                                        {/*{writer?.length > 0 && (
                                             <div className="info">
                                                 <span className="text bold">
                                                     Writer:{" "}
@@ -178,7 +178,7 @@ const DetailsBanner = ({ video, crew }) => {
                                                     ))}
                                                 </span>
                                             </div>
-                                        )}
+                                        )}*/}
 
                                         {data?.created_by?.length > 0 && (
                                             <div className="info">
