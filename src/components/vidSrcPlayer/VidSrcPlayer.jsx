@@ -4,19 +4,19 @@ import "./style.scss"; // Make sure to include relevant styles
 
 const VidSrcPlayer = ({ mediaType, id }) => {
     const url = `https://vidsrc.me/embed/${mediaType}/${id}`;
-    
 
     return (
         <div className="vidsrc-player">
-            <iframe
-                src={url}
-                referrerPolicy="origin"
-                width="100%"
-                height="500px"
-                frameBorder="0"
-                allowFullScreen
-                title="VidSrc Player"
-            ></iframe>
+            <h2>Video Player</h2>
+            <div className="video-container">
+                <iframe
+                    src={url}
+                    referrerPolicy="origin"
+                    frameBorder="0"
+                    allowFullScreen
+                    title="VidSrc Player"
+                ></iframe>
+            </div>
         </div>
     );
 };
