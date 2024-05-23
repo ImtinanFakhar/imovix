@@ -11,6 +11,38 @@
         align-items: center;
         flex-direction: column;
     }
+    .logoContainer {
+        float: left;
+    }
+    
+    .infoSection {
+        display: flex;
+        align-items: center; /* This will vertically center the logo and the text */
+        @media (max-width: 768px) { /* Adjust as needed */
+            flex-direction: column;
+        }
+    }
+    
+    .logoContainer img {
+        height: 80px; /* Adjust as needed */
+        width: 80px; /* Adjust as needed */
+        margin-right: 20px;
+        padding-bottom: 30px;                      /* This will add some space between the logo and the text */
+        @media (max-width: 768px) { /* Adjust as needed */
+            margin-right: 0;
+            padding-bottom: 5px; /* Adjust as needed */
+        }
+    }
+    
+    .logo {
+        height: 50px; /* Adjust as needed */
+        width: 50px; /* Adjust as needed */
+        margin-right: 20px; /* This will add some space between the logo and the text */
+        @media (max-width: 768px) {
+            height: 50px; /* Adjust as needed */
+            margin-right: 0;
+        }
+    }
     .menuItems {
         list-style-type: none;
         display: flex;
