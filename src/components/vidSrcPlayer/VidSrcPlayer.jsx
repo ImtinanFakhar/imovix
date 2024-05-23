@@ -13,7 +13,6 @@ const VidSrcPlayer = ({ mediaType, id }) => {
           src={url}
           referrerPolicy="origin"
           frameborder="0"
-          allow="autoplay; encrypted-media"
           allowfullscreen
           referrerpolicy="origin"
         ></iframe>
