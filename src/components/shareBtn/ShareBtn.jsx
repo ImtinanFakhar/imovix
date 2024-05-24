@@ -10,7 +10,8 @@ const ShareBtn= () => {
         color: "social", // set the color of buttons (social, white)
         enabled: true, // show/hide buttons (true, false)
         font_size: 16, // font size for the buttons
-        labels: "counts", // button labels (cta, counts, null)
+        labels: "counts",
+        min_count: 1000, // button labels (cta, counts, null)
         language: "en", // language of the buttons
         networks: [
           // which networks to include (facebook, twitter, linkedin, pinterest, email)
@@ -27,9 +28,8 @@ const ShareBtn= () => {
         size: 30, // the size of each button (INTEGER)
         show_mobile: true, // show/hide the component on mobile (true, false)
         show: true, // show/hide the component (true, false)
-        spacing: 10,
-        min_count: 10,// the space between buttons (INTEGER)
-        url: https://imovix.vercel.app/, // url to share
+        spacing: 10, // the space between buttons (INTEGER)
+        url: window.location.href, // url to share
         title: "Check out this amazing website!", // title to share
         description: "Explore thousands of movies, TV shows, and more!", // description to share
       }}
