@@ -7,7 +7,7 @@ const VidSrcPlayer = ({ mediaType, id }) => {
 
   return (
     <div className="vidsrc-player">
-      <h2>Video Player</h2>
+    
       <div className="video-container">
         <iframe
           src={url}
