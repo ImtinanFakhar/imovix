@@ -1,0 +1,67 @@
+.shareButtons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 1rem;
+  
+    .shareButton {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      button {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s;
+  
+        &:hover {
+          transform: scale(1.1);
+        }
+  
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+  
+      .shareCount {
+        margin-top: 5px;
+        font-size: 1rem;
+        color: #fff;
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .shareButtons {
+      gap: 10px;
+  
+      .shareButton {
+        button {
+          width: 45px;
+          height: 45px;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .shareButtons {
+      gap: 8px;
+  
+      .shareButton {
+        button {
+          width: 40px;
+          height: 40px;
+        }
+  
+        .shareCount {
+          font-size: 0.875rem;
+        }
+      }
+    }
+  }
+  
