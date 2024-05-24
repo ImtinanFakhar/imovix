@@ -1,5 +1,5 @@
 .vidsrc-player {
-    width: 48%; // Set player width to 80% of its container
+    width: 90%; // Set player width to 80% of its container
     margin: auto; // Add this line to center the player
   
 
@@ -16,7 +16,8 @@
         padding-bottom: 40%; // Adjust the aspect ratio to your preference (e.g., 16:9 = 56.25%)
         height: 0;
         overflow: hidden;
-        margin-bottom: 20px; // Add a gap from the bottom
+        margin-bottom: 20px;
+        width: 100%; // Add a gap from the bottom
 
         iframe {
             position: absolute;
@@ -26,8 +27,5 @@
             min-height: 100%;
         }
     }
-    @media (max-width: 768px) { // Apply these rules when the screen width is 768px or less
-        width: 100%;
-        min-height: 200px; 
-    }
+    
 }
