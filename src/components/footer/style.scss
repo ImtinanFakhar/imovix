@@ -30,6 +30,7 @@
         padding-bottom: 50px;                      /* This will add some space between the logo and the text */
         @media (max-width: 768px) { /* Adjust as needed */
             margin-right: 0;
+            height:max-content;
            padding-bottom: 5px; /* Adjust as needed */
         }
     }
