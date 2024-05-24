@@ -23,7 +23,8 @@ const Footer = () => {
         <img src={logo} alt="" />
         </div>
         <div className="infoText">
-            Thanks for visiting! Enjoy exploring over 10000 movies, TV shows, and celebrity profiles—absolutely free and ad-free.
+           Disclaimer:
+            We use third-party services for streaming content and do not host or store any files on our servers. All content is provided by external providers, and we are not responsible for the material hosted on third-party sites.
               <h4> ©  IMovix.</h4>
         </div>
     </div>
