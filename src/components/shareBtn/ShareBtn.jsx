@@ -27,8 +27,9 @@ const ShareBtn= () => {
         size: 30, // the size of each button (INTEGER)
         show_mobile: true, // show/hide the component on mobile (true, false)
         show: true, // show/hide the component (true, false)
-        spacing: 10, // the space between buttons (INTEGER)
-        url: window.location.href, // url to share
+        spacing: 10,
+        min_count: 10,// the space between buttons (INTEGER)
+        url: https://imovix.vercel.app/, // url to share
         title: "Check out this amazing website!", // title to share
         description: "Explore thousands of movies, TV shows, and more!", // description to share
       }}
