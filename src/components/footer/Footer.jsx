@@ -1,6 +1,6 @@
 import React from "react";
 
-import logo from "../../assets/movix-logo.svg";
+import logo from "../../assets/IMOVIX__1.png";
 import ContentWrapper from "../contentWrapper/ContentWrapper";
 
 import "./style.scss";
