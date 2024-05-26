@@ -3,6 +3,8 @@ import { useNavigate} from "react-router-dom";
 import logo from "../../assets/IMOVIX__1.png";
 import ContentWrapper from "../contentWrapper/ContentWrapper";
 import contact from "../../pages/contact/Contact";
+import DMCA from "../../pages/dMCA/DMCA";
+import termsOfUse from "../../pages/termsOfUse/TermsOfUse";
 import "./style.scss";
 
 const Footer = () => {
@@ -11,13 +13,17 @@ const Footer = () => {
         <footer className="footer">
             <ContentWrapper>
             
-                <ul className="menuItems">
-                    <li className="menuItem">Terms Of Use</li>
-                    <li className="menuItem">Privacy-Policy</li>
-                    <li className="menuItem" onClick={() => navigate("/contact")}>Contact</li>
-                    <li className="menuItem">Blog</li>
-                    <li className="menuItem">FAQ</li>
-                </ul>
+               <ul className="menuItems">
+          <li className="menuItem" onClick={() => navigate("/termsofuse")}>
+            Terms Of Use
+          </li>
+          <li className="menuItem" onClick={() => navigate("/dmca")}>
+            DMCA
+          </li>
+          <li className="menuItem" onClick={() => navigate("/contact")}>
+            Contact
+          </li>
+        </ul>
                
                 <div className="infoSection">
         <div className="logoContainer">
