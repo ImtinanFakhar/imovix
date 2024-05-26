@@ -11,10 +11,9 @@ const ShareBtn= () => {
         enabled: true, // show/hide buttons (true, false)
         font_size: 16, // font size for the buttons
         labels: "counts",
-        min_count: 1000, // button labels (cta, counts, null)
         language: "en", // language of the buttons
         networks: [
-          // which networks to include (facebook, twitter, linkedin, pinterest, email)
+        
           'whatsapp',
               'telegram',
               'messenger',
