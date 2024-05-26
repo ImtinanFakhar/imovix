@@ -28,7 +28,7 @@ const ShareBtn= () => {
         show_mobile: true, // show/hide the component on mobile (true, false)
         show: true, // show/hide the component (true, false)
         spacing: 10, // the space between buttons (INTEGER)
-        url: https://www.imovix.online/, // url to share
+        url: 'https://www.imovix.online/', // url to share
         image: 'https://www.imovix.online/images/IMOVIX__1.png',
         title: "Check out this amazing website!", // title to share
         description: "Explore thousands of movies, TV shows, and more!", // description to share
