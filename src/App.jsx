@@ -11,6 +11,8 @@ import SearchResult from "./pages/searchResult/SearchResult";
 import Explore from "./pages/explore/Explore";
 import PageNotFound from "./pages/404/PageNotFound";
 import Contact from "./pages/contact/Contact";
+import DMCA from './pages/dMCA/DMCA';
+import TermsOfUse from "./pages/termsOfUse/TermsOfUse"
 function App() {
   const dispatch = useDispatch();
 
@@ -56,6 +58,8 @@ function App() {
         <Route path="/search/:query" element={<SearchResult />} />
         <Route path="/explore/:mediaType" element={<Explore />} />
         <Route path= "/contact" element={<Contact/>}  />
+        <Route path= "/dmca" element={<DMCA/>} />
+        <Route path= "/termsofuse" element={<TermsOfUse/>} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />
