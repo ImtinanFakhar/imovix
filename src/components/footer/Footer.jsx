@@ -1,8 +1,8 @@
 import React from "react";
-
+import { useNavigate} from "react-router-dom";
 import logo from "../../assets/IMOVIX__1.png";
 import ContentWrapper from "../contentWrapper/ContentWrapper";
-
+import contact from "../../pages/contact/Contact";
 import "./style.scss";
 
 const Footer = () => {
@@ -13,7 +13,7 @@ const Footer = () => {
                 <ul className="menuItems">
                     <li className="menuItem">Terms Of Use</li>
                     <li className="menuItem">Privacy-Policy</li>
-                    <li className="menuItem">About</li>
+                    <li className="menuItem" onClick={() => navigate("/contact")}>Contact</li>
                     <li className="menuItem">Blog</li>
                     <li className="menuItem">FAQ</li>
                 </ul>
