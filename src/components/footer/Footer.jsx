@@ -6,6 +6,7 @@ import contact from "../../pages/contact/Contact";
 import "./style.scss";
 
 const Footer = () => {
+    const navigate = useNavigate();
     return (
         <footer className="footer">
             <ContentWrapper>
