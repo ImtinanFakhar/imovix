@@ -60,7 +60,7 @@ const HeroBanner = () => {
             <button onClick={searchButtonClickHandler}>Search</button>
           </div>
           <div className="shareButtons">
-            <ShareBtn />
+           <ShareBtn url={window.location.origin} />
           </div>
         </div>
       </ContentWrapper>
