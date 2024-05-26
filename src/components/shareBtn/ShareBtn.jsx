@@ -23,12 +23,13 @@ const ShareBtn= () => {
         ],
         padding: 12, // padding within buttons (INTEGER)
         radius: 4, // the corner radius on each button (INTEGER)
-        show_total:true ,
+        show_total:true,
         size: 30, // the size of each button (INTEGER)
         show_mobile: true, // show/hide the component on mobile (true, false)
         show: true, // show/hide the component (true, false)
         spacing: 10, // the space between buttons (INTEGER)
-        url: window.location.href, // url to share
+        url: https://www.imovix.online/, // url to share
+        image: 'https://www.imovix.online/images/IMOVIX__1.png',
         title: "Check out this amazing website!", // title to share
         description: "Explore thousands of movies, TV shows, and more!", // description to share
       }}
