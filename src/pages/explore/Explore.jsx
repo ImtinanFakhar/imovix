@@ -99,7 +99,7 @@ const Explore = () => {
     return (
         <div className="explorePage">
             <Helmet>
-        <title>Explore Page - IMovix</title>
+        <title>Explore - IMovix</title>
         <meta name="description" content="Welcome to the Explore page of IMovix. Explore and watch free trending, popular, and top-rated content." />
         <meta name="keywords" content="home, trending, popular, top-rated, your website" />
         <link rel="canonical" href="/explore" />
