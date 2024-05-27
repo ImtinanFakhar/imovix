@@ -41,7 +41,7 @@ const Details = () => {
           </div>
         </Link>
       </div>
-            <DetailsBanner video={data?.results?.[0]} crew={credits?.crew} />
+            
             <Cast data={credits?.cast} loading={creditsLoading} />
            {/*  <VideosSection data={data} loading={loading} />*/}
            <ShareBtn url={`${window.location.origin}/${mediaType}/${id}`}/>
