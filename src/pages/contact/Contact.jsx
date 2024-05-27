@@ -62,7 +62,7 @@ const Contact = () => {
     <ContentWrapper>
       <div className="contact-wrapper">
          <Helmet>
-        <title>Contact Page - IMovix</title>
+        <title>Contact - IMovix</title>
         <meta name="description" content="Welcome to the Contact page of IMovix. Contact us related to dmca or copyright isssues." />
         <meta name="keywords" content="home, trending, popular, top-rated, your website" />
         <link rel="canonical" href="/contact" />
