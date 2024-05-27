@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Select from "react-select";
-
+import { Helmet } from "react-helmet";
 import "./style.scss";
 
 import useFetch from "../../hooks/useFetch";
@@ -98,6 +98,12 @@ const Explore = () => {
 
     return (
         <div className="explorePage">
+            <Helmet>
+        <title>Explore Page - IMovix</title>
+        <meta name="description" content="Welcome to the Explore page of IMovix. Explore and watch free trending, popular, and top-rated content." />
+        <meta name="keywords" content="home, trending, popular, top-rated, your website" />
+        <link rel="canonical" href="/explore" />
+      </Helmet>
             <ContentWrapper>
                 <div className="pageHeader">
                     <div className="pageTitle">
