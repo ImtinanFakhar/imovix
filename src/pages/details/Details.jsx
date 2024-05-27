@@ -8,7 +8,9 @@ import Cast from "./cast/Cast";
 import VideosSection from "./videosSection/VideosSection";
 import Similar from "./carousels/Similar";
 import Recommendation from "./carousels/Recommendation";
-import VidSrcPlayer from "../../components/vidSrcPlayer/VidSrcPlayer"; // Import the new component
+import VidSrcPlayer from "../../components/vidSrcPlayer/VidSrcPlayer"; 
+import { Link } from "react-scroll";
+import { PlayIcon } from "./PlayBtn";
 import ShareBtn from "../../components/shareBtn/ShareBtn";
 const Details = () => {
     const { mediaType, id } = useParams();
@@ -25,6 +27,20 @@ const Details = () => {
         <meta name="keywords" content="home, trending, popular, top-rated,Imovix, watch free movies" />
         <link rel="canonical" href="/details" />
       </Helmet>
+            <div className="banner-container">
+        <DetailsBanner video={data?.results?.[0]} crew={credits?.crew} />
+        <Link
+          to="vidSrcPlayer"
+          smooth={true}
+          duration={500}
+          className="play-now-button"
+        >
+          <div className="playbtn">
+            <PlayIcon />
+            <span className="text">Watch Now</span>
+          </div>
+        </Link>
+      </div>
             <DetailsBanner video={data?.results?.[0]} crew={credits?.crew} />
             <Cast data={credits?.cast} loading={creditsLoading} />
            {/*  <VideosSection data={data} loading={loading} />*/}
