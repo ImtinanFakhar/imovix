@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import "./style.scss";
-
+import { Helmet } from "react-helmet";
 import useFetch from "../../hooks/useFetch";
 import DetailsBanner from "./detailsBanner/DetailsBanner";
 import Cast from "./cast/Cast";
@@ -19,6 +19,12 @@ const Details = () => {
 
     return (
         <div>
+            <Helmet>
+        <title>Details - IMovix</title>
+        <meta name="description" content="Welcome to the details page of IMovix. Discover and watch free trending, popular, and top-rated content." />
+        <meta name="keywords" content="home, trending, popular, top-rated,Imovix, watch free movies" />
+        <link rel="canonical" href="/details" />
+      </Helmet>
             <DetailsBanner video={data?.results?.[0]} crew={credits?.crew} />
             <Cast data={credits?.cast} loading={creditsLoading} />
            {/*  <VideosSection data={data} loading={loading} />*/}
