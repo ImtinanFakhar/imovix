@@ -55,6 +55,7 @@
             .posterImg {
                 width: 100%;
                 display: block;
+                filter: blur(1px);
                 border-radius: 12px;
                 @include md {
                     max-width: 350px;
