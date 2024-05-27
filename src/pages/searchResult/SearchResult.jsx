@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import InfiniteScroll from "react-infinite-scroll-component";
-
+import { Helmet } from "react-helmet";
 import "./style.scss";
 
 import { fetchDataFromApi } from "../../utils/api";
@@ -50,6 +50,12 @@ const SearchResult = () => {
 
     return (
         <div className="searchResultsPage">
+             <Helmet>
+        <title>search - IMovix</title>
+        <meta name="description" content="Welcome to the search page of IMovix. search and watch free trending, popular, and top-rated content." />
+        <meta name="keywords" content="home, trending, popular, top-rated, Imovix, watch and search free movies" />
+        <link rel="canonical" href="/searchresults" />
+      </Helmet>
             {loading && <Spinner initial={true} />}
             {!loading && (
                 <ContentWrapper>
