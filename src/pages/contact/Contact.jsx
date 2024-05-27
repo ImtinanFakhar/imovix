@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
 import './style.scss';
 import ContentWrapper from '../../components/contentWrapper/ContentWrapper';
-
+import { Helmet } from "react-helmet";
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -61,6 +61,12 @@ const Contact = () => {
   return (
     <ContentWrapper>
       <div className="contact-wrapper">
+         <Helmet>
+        <title>Contact Page - IMovix</title>
+        <meta name="description" content="Welcome to the Contact page of IMovix. Contact us related to dmca or copyright isssues." />
+        <meta name="keywords" content="home, trending, popular, top-rated, your website" />
+        <link rel="canonical" href="/contact" />
+      </Helmet>
         <h2>Contact Us</h2>
         <form onSubmit={handleSubmit} className="contact-form">
           <label>
