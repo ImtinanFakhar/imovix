@@ -3,6 +3,7 @@ import { fetchDataFromApi } from "./utils/api";
 import { useSelector, useDispatch } from "react-redux";
 import { getApiConfiguration, getGenres } from "./store/homeSlice";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Home from "./pages/home/Home";
@@ -51,6 +52,7 @@ function App() {
 
   return (
     <BrowserRouter>
+       <Analytics>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -63,6 +65,7 @@ function App() {
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />
+           </Analytics>
     </BrowserRouter>
   );
 }
