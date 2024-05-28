@@ -52,7 +52,7 @@ function App() {
 
   return (
     <BrowserRouter>
-       <Analytics>
+      
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -65,7 +65,7 @@ function App() {
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />
-           </Analytics>
+           <Analytics/>
     </BrowserRouter>
   );
 }
