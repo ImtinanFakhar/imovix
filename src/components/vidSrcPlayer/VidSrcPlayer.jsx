@@ -7,7 +7,7 @@ const VidSrcPlayer = ({ mediaType, id }) => {
 
   return (
     <div className="vidsrc-player">
-      <h3>Stream Now</h3>
+      <h3>If a server doesn't work change to a different one.</h3>
       <div className="video-container">
         <iframe
           src={url}
