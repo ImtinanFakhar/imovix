@@ -102,7 +102,9 @@ const Explore = () => {
         <title>Explore - IMovix</title>
         <meta name="description" content=" Explore page of IMovix. watch free trending, popular, and top-rated content." />
         <meta name="keywords" content="explore movies,new releases, trending, popular, top-rated, imovix" />
-        <link rel="canonical" href="/explore" />
+        <link rel="canonical" href="https://www.imovix.online/explore/movie" />
+        <link rel="canonical" href="https://www.imovix.online/explore/tv" />
+                
       </Helmet>
             <ContentWrapper>
                 <div className="pageHeader">
