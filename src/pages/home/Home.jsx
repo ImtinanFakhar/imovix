@@ -14,7 +14,7 @@ const Home = () => {
         property="og:description"
         content="Watch movies online for free. Stream the latest movies and TV shows on our platform. No subscription required."
       />
-        <link rel="canonical" href="https://www.imovix.online/" />
+        <link rel="canonical" href="https://www.imovix.online" />
       <meta property="og:image" content="/images/IMOVIX__1.png" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
