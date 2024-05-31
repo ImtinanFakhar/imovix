@@ -54,7 +54,7 @@ const SearchResult = () => {
         <title>search - IMovix</title>
         <meta name="description" content="Welcome to the search page of IMovix. search and watch free trending, popular, and top-rated content." />
         <meta name="keywords" content="home, trending, popular, top-rated, Imovix, watch and search free movies" />
-        <link rel="canonical" href="/search" />
+        <link rel="canonical" href="https://www.imovix.online/search" />
       </Helmet>
             {loading && <Spinner initial={true} />}
             {!loading && (
