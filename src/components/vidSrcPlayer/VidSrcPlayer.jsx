@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import "./style.scss"; // Make sure to include relevant styles
 
 const VidSrcPlayer = ({ mediaType, id }) => {
-  const url = `https://vidsrc.to/embed/${mediaType}/${id}?autoplay=1&logo=0`;
+  const url = `https://vidsrc.xyz/embed/${mediaType}/${id}?autoplay=1&logo=0`;
 
   return (
     <div className="vidsrc-player">
