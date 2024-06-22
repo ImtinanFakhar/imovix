@@ -14,10 +14,9 @@ import Explore from "./pages/explore/Explore";
 import PageNotFound from "./pages/404/PageNotFound";
 import Contact from "./pages/contact/Contact";
 import DMCA from './pages/dMCA/DMCA';
-import TermsOfUse from "./pages/termsOfUse/TermsOfUse"
-function App() {
-  const dispatch = useDispatch();
-const Analytics = () => {
+import TermsOfUse from "./pages/termsOfUse/TermsOfUse";
+
+const AnalyticsComponent = () => {
   const location = useLocation();
 
   useEffect(() => {
@@ -28,6 +27,8 @@ const Analytics = () => {
 };
 
 const App = () => {
+  const dispatch = useDispatch();
+
   useEffect(() => {
     initGA();
   }, []);
@@ -59,30 +60,29 @@ const App = () => {
       promises.push(fetchDataFromApi(`/genre/${url}/list`));
     });
     const data = await Promise.all(promises);
-    data.map(({genres})=>{
-      return genres.map((item) => (allGenres[item.id] = item))
-    })
-    dispatch(getGenres(allGenres))
+    data.map(({ genres }) => {
+      return genres.map((item) => (allGenres[item.id] = item));
+    });
+    dispatch(getGenres(allGenres));
   };
 
   return (
     <BrowserRouter>
-      
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/:mediaType/:id" element={<Details />} />
         <Route path="/search/:query" element={<SearchResult />} />
         <Route path="/explore/:mediaType" element={<Explore />} />
-        <Route path= "/contact" element={<Contact/>}  />
-        <Route path= "/dmca" element={<DMCA/>} />
-        <Route path= "/termsofuse" element={<TermsOfUse/>} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/dmca" element={<DMCA />} />
+        <Route path="/termsofuse" element={<TermsOfUse />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />
-           <Analytics/>
+      <AnalyticsComponent />
     </BrowserRouter>
   );
-}
+};
 
 export default App;
