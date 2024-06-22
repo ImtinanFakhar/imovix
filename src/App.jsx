@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { fetchDataFromApi } from "./utils/api";
 import { useSelector, useDispatch } from "react-redux";
 import { getApiConfiguration, getGenres } from "./store/homeSlice";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { initGA, logPageView } from './utils/analytics';
 import { Analytics } from "@vercel/analytics/react";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
@@ -16,6 +17,20 @@ import DMCA from './pages/dMCA/DMCA';
 import TermsOfUse from "./pages/termsOfUse/TermsOfUse"
 function App() {
   const dispatch = useDispatch();
+const Analytics = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    logPageView();
+  }, [location]);
+
+  return null;
+};
+
+const App = () => {
+  useEffect(() => {
+    initGA();
+  }, []);
 
   useEffect(() => {
     fetchApiConfig();
