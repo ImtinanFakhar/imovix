@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import { fetchDataFromApi } from "./utils/api";
 import { useSelector, useDispatch } from "react-redux";
 import { getApiConfiguration, getGenres } from "./store/homeSlice";
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { initGA, logPageView } from './utils/analytics';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
@@ -14,24 +13,9 @@ import Explore from "./pages/explore/Explore";
 import PageNotFound from "./pages/404/PageNotFound";
 import Contact from "./pages/contact/Contact";
 import DMCA from './pages/dMCA/DMCA';
-import TermsOfUse from "./pages/termsOfUse/TermsOfUse";
-
-const AnalyticsComponent = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    logPageView();
-  }, [location]);
-
-  return null;
-};
-
-const App = () => {
+import TermsOfUse from "./pages/termsOfUse/TermsOfUse"
+function App() {
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    initGA();
-  }, []);
 
   useEffect(() => {
     fetchApiConfig();
@@ -60,30 +44,30 @@ const App = () => {
       promises.push(fetchDataFromApi(`/genre/${url}/list`));
     });
     const data = await Promise.all(promises);
-    data.map(({ genres }) => {
-      return genres.map((item) => (allGenres[item.id] = item));
-    });
-    dispatch(getGenres(allGenres));
+    data.map(({genres})=>{
+      return genres.map((item) => (allGenres[item.id] = item))
+    })
+    dispatch(getGenres(allGenres))
   };
 
   return (
     <BrowserRouter>
+      
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/:mediaType/:id" element={<Details />} />
         <Route path="/search/:query" element={<SearchResult />} />
         <Route path="/explore/:mediaType" element={<Explore />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/dmca" element={<DMCA />} />
-        <Route path="/termsofuse" element={<TermsOfUse />} />
+        <Route path= "/contact" element={<Contact/>}  />
+        <Route path= "/dmca" element={<DMCA/>} />
+        <Route path= "/termsofuse" element={<TermsOfUse/>} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />
-      <AnalyticsComponent />
-      <Analytics/>
+           <Analytics/>
     </BrowserRouter>
   );
-};
+}
 
 export default App;
