@@ -81,6 +81,7 @@ const App = () => {
       </Routes>
       <Footer />
       <AnalyticsComponent />
+      <Analytics/>
     </BrowserRouter>
   );
 };
