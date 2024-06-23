@@ -1,9 +1,12 @@
-import { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+import ReactDOM from "react-dom";
+import TagManager from "react-gtm-module";
+import { Provider } from "react-redux";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import { fetchDataFromApi } from "./utils/api";
-import { useSelector, useDispatch } from "react-redux";
 import { getApiConfiguration, getGenres } from "./store/homeSlice";
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { initGA, logPageView } from './utils/analytics';
+import { initGA, logPageView } from "./utils/analytics";
 import { Analytics } from "@vercel/analytics/react";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
@@ -13,14 +16,28 @@ import SearchResult from "./pages/searchResult/SearchResult";
 import Explore from "./pages/explore/Explore";
 import PageNotFound from "./pages/404/PageNotFound";
 import Contact from "./pages/contact/Contact";
-import DMCA from './pages/dMCA/DMCA';
-import TermsOfUse from "./pages/termsOfUse/TermsOfUse"
+import DMCA from "./pages/dMCA/DMCA";
+import TermsOfUse from "./pages/termsOfUse/TermsOfUse";
+
+const tagManagerArgs = {
+  gtmId: "GTM-NM64GB8P", // Replace with your GTM ID
+};
 
 const AnalyticsComponent = () => {
   const location = useLocation();
 
   useEffect(() => {
     logPageView();
+    TagManager.dataLayer({
+      dataLayer: {
+        event: "pageview",
+        page: {
+          path: location.pathname,
+          search: location.search,
+          title: document.title,
+        },
+      },
+    });
   }, [location]);
 
   return null;
@@ -31,6 +48,7 @@ const App = () => {
 
   useEffect(() => {
     initGA();
+    TagManager.initialize(tagManagerArgs);
   }, []);
 
   useEffect(() => {
@@ -80,7 +98,7 @@ const App = () => {
       </Routes>
       <Footer />
       <AnalyticsComponent />
-      <Analytics/>
+      <Analytics />
     </BrowserRouter>
   );
 };
