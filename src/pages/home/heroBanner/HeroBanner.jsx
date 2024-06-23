@@ -43,9 +43,8 @@ const HeroBanner = () => {
     }
   };
 
-  return (
-     <>
-    <ThankYouModal show={showModal} handleClose={handleCloseModal} />
+  return (
+    
     <div className="heroBanner">
       {!loading && (
         <div className="backdrop-img">
@@ -75,8 +74,7 @@ const HeroBanner = () => {
           </div>
         </div>
       </ContentWrapper>
-    </div>
-       </>
+    </div>
   );
 };
 
