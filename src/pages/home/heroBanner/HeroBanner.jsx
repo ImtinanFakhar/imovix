@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./style.scss";
-
+import ThankYouModal from "../../../components/thankyoumodel/ ThankYouModal";
 import useFetch from "../../../hooks/useFetch";
 import Img from "../../../components/lazyLoadImage/Img";
 import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
@@ -14,7 +14,16 @@ const HeroBanner = () => {
   const navigate = useNavigate();
   const { url } = useSelector((state) => state.home);
   const { data, loading } = useFetch("/movie/upcoming");
+  const [showModal, setShowModal] = useState(false);
 
+  useEffect(() => {
+    // Show the modal when the component mounts
+    setShowModal(true);
+  }, []);
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
   useEffect(() => {
     const bg =
       url.backdrop +
@@ -35,6 +44,8 @@ const HeroBanner = () => {
   };
 
   return (
+     <>
+    <ThankYouModal show={showModal} handleClose={handleCloseModal} />
     <div className="heroBanner">
       {!loading && (
         <div className="backdrop-img">
@@ -65,6 +76,7 @@ const HeroBanner = () => {
         </div>
       </ContentWrapper>
     </div>
+       </>
   );
 };
 
