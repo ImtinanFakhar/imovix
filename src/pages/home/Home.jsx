@@ -9,6 +9,7 @@ const Home = () => {
     <div className="homePage">
       <Helmet>
         <title>Home - Free Movie Streaming Website</title>
+<meta name="google-adsense-account" content="ca-pub-8919482185936104">
       <meta property="og:title" content="Movie Streaming Website - Home" />
       <meta
         property="og:description"
