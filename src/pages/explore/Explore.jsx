@@ -101,7 +101,6 @@ const Explore = () => {
             <Helmet>
         <title>Explore - IMovix</title>
         <meta name="description" content=" Explore page of IMovix. watch free trending, popular, and top-rated content." />
-<meta name="google-adsense-account" content="ca-pub-8919482185936104">
         <meta name="keywords" content="explore movies,new releases, trending, popular, top-rated, imovix" />
         <link rel="canonical" href="https://www.imovix.online/explore/movie" />
         <link rel="canonical" href="https://www.imovix.online/explore/tv" />
