@@ -2,18 +2,23 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./style.scss"; // Make sure to include relevant styles
 
-const VidSrcPlayer = ({ mediaType, id }) => {
-  const url = `https://vidsrc.me/embed/${mediaType}/${id}?autoplay=1&logo=0`;
+const VidSrcPlayer = ({ mediaType, id, season, episode }) => {
+  let url;
+  if (mediaType === "movie") {
+    url = `https://player.smashy.stream/movie/${id}?autoplay=1&logo=0`;
+  } else if (mediaType === "tv") {
+    url = `https://player.smashy.stream/tv/${id}?s=${season}&e=${episode}&autoplay=1&logo=0`;
+  }
 
   return (
     <div className="vidsrc-player">
-      <h3>If a server doesn't work change to a different one.</h3>
+    
       <div className="video-container">
         <iframe
           src={url}
           referrerPolicy="origin"
           allow="autoplay; encrypted-media"
-          allowfullscreen="true"
+          allowFullScreen={true}
         ></iframe>
       </div>
     </div>
@@ -23,6 +28,8 @@ const VidSrcPlayer = ({ mediaType, id }) => {
 VidSrcPlayer.propTypes = {
   mediaType: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
+  season: PropTypes.number,
+  episode: PropTypes.number,
 };
 
 export default VidSrcPlayer;
