@@ -1,32 +1,21 @@
 .vidsrc-player {
-    width: 100%; // Set player width to 80% of its container
-    margin: auto; // Add this line to center the player
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding-top: 56.25%; /* 16:9 aspect ratio (for responsive iframe) */
+  }
   
-
-    h3 {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        text-align: center;
-        color: rgb(255, 255, 255); 
-       
-    }
-
-    .video-container {
-        position: relative;
-        padding-bottom: 40%; // Adjust the aspect ratio to your preference (e.g., 16:9 = 56.25%)
-        height: 0;
-        overflow: hidden;
-        margin-bottom: 20px;
-        width: 100%; // Add a gap from the bottom
-
-        iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%; // Set iframe width to 100% of its container
-            min-height: 100%;
-            margin-top: 5px;
-        }
-    }
-    
-}
+  .video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .video-container iframe {
+    width: 100%;
+    height: 100%;
+  }
+  
