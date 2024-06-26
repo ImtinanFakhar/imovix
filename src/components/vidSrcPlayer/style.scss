@@ -1,21 +1,50 @@
 .vidsrc-player {
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-    position: relative;
-    padding-top: 56.25%; /* 16:9 aspect ratio (for responsive iframe) */
-  }
+  width: 80%; /* Set player width to 80% of its container */
+  margin: auto; /* Center the player */
   
+  h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #fff; 
+  }
+
   .video-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio for larger screens */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 20px;
+    width: 100%; /* Add a gap from the bottom */
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%; /* Set iframe width to 100% of its container */
+      min-height: 100%;
+      margin-top: 5px;
+    }
   }
-  
-  .video-container iframe {
-    width: 100%;
-    height: 100%;
+
+  /* Media Query for Mobile Screens */
+  @media (max-width: 768px) {
+    width: 100%; /* Full width on mobile screens */
+    padding-top: 0; /* Adjust padding to remove extra space */
+
+    .video-container {
+      padding-bottom: 56.25%; /* Maintain aspect ratio */
+      height: 0;
+
+      iframe {
+        min-height: 56.25%; /* Adjust iframe height to fit better on mobile */
+      }
+    }
+
+    h3 {
+      font-size: 1rem; /* Adjust font size for mobile screens */
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
   }
-  
+}
