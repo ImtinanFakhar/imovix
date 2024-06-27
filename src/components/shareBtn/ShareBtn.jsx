@@ -17,9 +17,9 @@ const ShareBtn= ({url}) => {
           'whatsapp',
               'telegram',
               'messenger',
-              'pinterest',
-              'facebook',
-              'reddit'
+              'reddit',
+              'facebook'
+              
         ],
         padding: 12, // padding within buttons (INTEGER)
         radius: 4, // the corner radius on each button (INTEGER)
