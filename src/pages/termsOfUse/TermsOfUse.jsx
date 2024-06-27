@@ -9,8 +9,7 @@ const TermsOfUse = () => {
         <p>
           Welcome to IMovix. If you continue to browse and use this website,
           you are agreeing to comply with and be bound by the following terms and
-          conditions of use, which together with our privacy policy govern [Your
-          Company Name]’s relationship with you in relation to this website.
+          conditions of use, which together with our privacy policy govern Imovix’s relationship with you in relation to this website.
         </p>
         <h2>1. Use of the Website</h2>
         <p>
@@ -38,7 +37,7 @@ const TermsOfUse = () => {
         </p>
         <h2>5. Limitation of Liability</h2>
         <p>
-          In no event shall [Your Company Name], nor its directors, employees,
+          In no event shall Imovix, nor its directors, employees,
           partners, agents, suppliers, or affiliates, be liable for any indirect,
           incidental, special, consequential or punitive damages, including without
           limitation, loss of profits, data, use, goodwill, or other intangible
