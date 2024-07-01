@@ -7,12 +7,11 @@ const VidSrcPlayer = ({ mediaType, id, season, episode }) => {
   if (mediaType === "movie") {
     url = `https://vidsrc.pro/embed/movie/${id}?autoplay=1&logo=0`;
   } else if (mediaType === "tv") {
-    url = `https://vidsrc.pro/embed/tv/${id}?s=${season}&e=${episode}&autoplay=1&logo=0`;
+    url = `https://vidsrc.pro/embed/tv/${id}/${season}/${episode}?autoplay=1&logo=0`;
   }
 
   return (
     <div className="vidsrc-player">
-    
       <div className="video-container">
         <iframe
           src={url}
