@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./style.scss";
-import ThankYouModal from "../../../components/thankyoumodel/ ThankYouModal";
+
 import useFetch from "../../../hooks/useFetch";
 import Img from "../../../components/lazyLoadImage/Img";
 import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
@@ -24,6 +24,7 @@ const HeroBanner = () => {
   const handleCloseModal = () => {
     setShowModal(false);
   };
+
   useEffect(() => {
     const bg =
       url.backdrop +
@@ -31,50 +32,72 @@ const HeroBanner = () => {
     setBackground(bg);
   }, [data]);
 
+  const redirectToAd = () => {
+    sessionStorage.setItem("adShown", "true");
+    window.open("https://tauphaub.net/4/7649841", "_blank");
+  };
+
   const searchQueryHandler = (event) => {
     if (event.key === "Enter" && query.length > 0) {
-      navigate(`/search/${query}`);
+      const adShown = sessionStorage.getItem("adShown");
+      if (!adShown) {
+        redirectToAd();
+      } else {
+        navigate(`/search/${query}`);
+      }
     }
   };
 
   const searchButtonClickHandler = () => {
     if (query.length > 0) {
-      navigate(`/search/${query}`);
+      const adShown = sessionStorage.getItem("adShown");
+      if (!adShown) {
+        redirectToAd();
+      } else {
+        navigate(`/search/${query}`);
+      }
     }
   };
 
-  return (
-    
-    <div className="heroBanner">
-      {!loading && (
-        <div className="backdrop-img">
-          <Img src={background} />
-        </div>
-      )}
+  const handleInputClick = () => {
+    const adShown = sessionStorage.getItem("adShown");
+    if (!adShown) {
+      redirectToAd();
+    }
+  };
 
-      <div className="opacity-layer"></div>
-      <ContentWrapper>
-        <div className="heroBannerContent">
-          <span className="title">Welcome</span>
-          <span className="subTitle">
-            Explore and watch movies, TV shows, and celebrity
-            profiles all for free and ad-free.
-          </span>
-          <div className="searchInput">
-            <input
-              type="text"
-              placeholder="Search for a movie or tv show...."
-              onChange={(e) => setQuery(e.target.value)}
-              onKeyUp={searchQueryHandler}
-            />
-            <button onClick={searchButtonClickHandler}>Search</button>
+  return (
+    <>
+      <div className="heroBanner">
+        {!loading && (
+          <div className="backdrop-img">
+            <Img src={background} />
           </div>
-          <div className="shareButtons">
-           <ShareBtn url={window.location.origin} />
+        )}
+        <div className="opacity-layer"></div>
+        <ContentWrapper>
+          <div className="heroBannerContent">
+            <span className="title">Welcome</span>
+            <span className="subTitle">
+              Watch over 10000 movies, TV shows, and celebrity profiles all for free and ad-free.
+            </span>
+            <div className="searchInput">
+              <input
+                type="text"
+                placeholder="Search for a movie or tv show...."
+                onChange={(e) => setQuery(e.target.value)}
+                onKeyUp={searchQueryHandler}
+                onClick={handleInputClick}
+              />
+              <button onClick={searchButtonClickHandler}>Search</button>
+            </div>
+            <div className="shareButtons">
+              <ShareBtn url={window.location.origin} />
+            </div>
           </div>
-        </div>
-      </ContentWrapper>
-    </div>
+        </ContentWrapper>
+      </div>
+    </>
   );
 };
 
