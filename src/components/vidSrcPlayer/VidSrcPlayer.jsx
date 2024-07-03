@@ -5,9 +5,9 @@ import "./style.scss"; // Make sure to include relevant styles
 const VidSrcPlayer = ({ mediaType, id, season, episode }) => {
   let url;
   if (mediaType === "movie") {
-    url = `https://vidsrc.pro/embed/movie/${id}?autoplay=1&logo=0`;
+    url = `https://vidsrc.me/embed/movie/${id}?autoplay=1&logo=0`;
   } else if (mediaType === "tv") {
-    url = `https://vidsrc.pro/embed/tv/${id}/${season}/${episode}?autoplay=1&logo=0`;
+    url = `https://vidsrc.me/embed/tv/${id}/${season}/${episode}?autoplay=1&logo=0`;
   }
 
   return (
