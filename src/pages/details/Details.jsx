@@ -1,4 +1,3 @@
-
 import React from "react";
 import { useParams } from "react-router-dom";
 import "./style.scss";
@@ -13,6 +12,7 @@ import Recommendation from "./carousels/Recommendation";
 import VidSrcPlayer from "../../components/vidSrcPlayer/VidSrcPlayer"; // Import the new component
 import ShareBtn from "../../components/shareBtn/ShareBtn";
 import TVShowDetails from "../tvShowDetails/TVShowDetails";
+
 const Details = () => {
   const { mediaType, id } = useParams();
   const { data, loading } = useFetch(`/${mediaType}/${id}/videos`);
@@ -43,14 +43,14 @@ const Details = () => {
         </Link>
       </div>
       <Cast data={credits?.cast} loading={creditsLoading} />
-      {/*  <VideosSection data={data} loading={loading} />*/}
+      {/* <VideosSection data={data} loading={loading} /> */}
       <ShareBtn url={`${window.location.origin}/${mediaType}/${id}`} />
       <div id="vidSrcPlayer">
-      {mediaType === "tv" ? (
-        <TVShowDetails mediaType={mediaType} id={id} />
-      ) : (
-        <VidSrcPlayer mediaType={mediaType} id={id} />
-      )}
+        {mediaType === "tv" ? (
+          <TVShowDetails mediaType={mediaType} id={id} />
+        ) : (
+          <VidSrcPlayer mediaType={mediaType} id={id} />
+        )}
       </div>
       <Similar mediaType={mediaType} id={id} />
       <Recommendation mediaType={mediaType} id={id} />
