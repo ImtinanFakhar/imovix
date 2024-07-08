@@ -59,6 +59,10 @@ const VidSrcPlayer = ({ mediaType, id, season, episode }) => {
           </button>
         ))}
       </div>
+       <div className="adblocker-notice">
+      Use an ad blocker for the best experience.
+
+      </div>
       <div className="video-container">
         <iframe
           src={url}
