@@ -6,8 +6,8 @@ import Popular from "./popular/Popular";
 import TopRated from "./topRated/TopRated";
 import TrendingTv from "./trendingTv/TrendingTv";
 import NetfixTv from "./netflixTv/NetflixTv";
-import AppleTv from "./appleTv /AppleTv";
-import AmazonTv from "./amazonTv  /AmazonTv";
+import AppleTv from "./appleTv/AppleTv";
+import AmazonTv from "./amazonTv/AmazonTv";
 import HboTv from "./Hbo/HboTv";
 import HuluTv from "./Hulu/HuluTv";
 const Home = () => {
