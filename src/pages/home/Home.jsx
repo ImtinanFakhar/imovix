@@ -5,6 +5,11 @@ import Trending  from "./trending/Trending";
 import Popular from "./popular/Popular";
 import TopRated from "./topRated/TopRated";
 import TrendingTv from "./trendingTv/TrendingTv";
+import NetfixTv from "./netflixTv/NetflixTv";
+import AppleTv from "./appleTv /AppleTv";
+import AmazonTv from "./amazonTv  /AmazonTv";
+import HboTv from "./Hbo/HboTv";
+import HuluTv from "./Hulu/HuluTv";
 const Home = () => {
   return (
     <div className="homePage">
@@ -30,6 +35,11 @@ const Home = () => {
       <Trending />
       <TrendingTv />
       <Popular />
+      <NetfixTv />
+      <AppleTv/>
+      <AmazonTv/>
+      <HboTv/>
+      <HuluTv/>
       <TopRated />
     </div>
   );
