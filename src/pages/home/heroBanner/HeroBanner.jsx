@@ -14,16 +14,8 @@ const HeroBanner = () => {
   const navigate = useNavigate();
   const { url } = useSelector((state) => state.home);
   const { data, loading } = useFetch("/movie/upcoming");
-  const [showModal, setShowModal] = useState(false);
 
-  useEffect(() => {
-    // Show the modal when the component mounts
-    setShowModal(true);
-  }, []);
 
-  const handleCloseModal = () => {
-    setShowModal(false);
-  };
 
   useEffect(() => {
     const bg =
@@ -32,39 +24,20 @@ const HeroBanner = () => {
     setBackground(bg);
   }, [data]);
 
-  const redirectToAd = () => {
-    sessionStorage.setItem("adShown", "true");
-    window.open("https://tauphaub.net/4/7649841", "_blank");
-  };
+
 
   const searchQueryHandler = (event) => {
-    if (event.key === "Enter" && query.length > 0) {
-      const adShown = sessionStorage.getItem("adShown");
-      if (!adShown) {
-        redirectToAd();
-      } else {
+    if (event.key === "Enter" && query.length > 0) {      
         navigate(`/search/${query}`);
-      }
+      
     }
   };
 
   const searchButtonClickHandler = () => {
-    if (query.length > 0) {
-      const adShown = sessionStorage.getItem("adShown");
-      if (!adShown) {
-        redirectToAd();
-      } else {
-        navigate(`/search/${query}`);
-      }
-    }
+    navigate(`/search/${query}`);
   };
 
-  const handleInputClick = () => {
-    const adShown = sessionStorage.getItem("adShown");
-    if (!adShown) {
-      redirectToAd();
-    }
-  };
+  
 
   return (
     <>
@@ -79,7 +52,7 @@ const HeroBanner = () => {
           <div className="heroBannerContent">
             <span className="title">Welcome</span>
             <span className="subTitle">
-              Explore and Watch Movies, TV shows all for free.
+              Watch over 10000 movies, TV shows, and celebrity profiles all for free and ad-free.
             </span>
             <div className="searchInput">
               <input
@@ -87,11 +60,12 @@ const HeroBanner = () => {
                 placeholder="Search for a movie or tv show...."
                 onChange={(e) => setQuery(e.target.value)}
                 onKeyUp={searchQueryHandler}
-                onClick={handleInputClick}
+               
               />
               <button onClick={searchButtonClickHandler}>Search</button>
             </div>
             <div className="shareButtons">
+            
               <ShareBtn url={window.location.origin} />
             </div>
           </div>
