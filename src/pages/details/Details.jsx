@@ -30,17 +30,6 @@ const Details = () => {
       </Helmet>
       <div className="banner-container">
         <DetailsBanner video={data?.results?.[0]} crew={credits?.crew} />
-        <Link
-          to="vidSrcPlayer"
-          smooth={true}
-          duration={500}
-          className="play-now-button"
-        >
-          <div className="playbtn">
-            <PlayIcon />
-            <span className="text">Watch Now</span>
-          </div>
-        </Link>
       </div>
       <Cast data={credits?.cast} loading={creditsLoading} />
       {/* <VideosSection data={data} loading={loading} /> */}
