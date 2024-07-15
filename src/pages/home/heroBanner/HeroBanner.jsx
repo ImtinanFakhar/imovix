@@ -52,7 +52,7 @@ const HeroBanner = () => {
           <div className="heroBannerContent">
             <span className="title">Welcome</span>
             <span className="subTitle">
-              Watch over 10000 movies, TV shows, and celebrity profiles all for free and ad-free.
+              Watch and explore Movies, TV shows, Anime and much more all for free.
             </span>
             <div className="searchInput">
               <input
