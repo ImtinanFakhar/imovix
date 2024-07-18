@@ -13,23 +13,50 @@ const HeroBanner = () => {
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
   const { url } = useSelector((state) => state.home);
-  const { data, loading } = useFetch("/movie/upcoming");
 
+  const topRatedMovies = useFetch("/movie/top_rated");
+  const upcomingMovies = useFetch("/movie/upcoming");
+  const nowPlayingMovies = useFetch("/movie/now_playing");
+  const popularMovies = useFetch("/movie/popular");
 
+  const topRatedTV = useFetch("/tv/top_rated");
+  const onTheAirTV = useFetch("/tv/on_the_air");
+  const popularTV = useFetch("/tv/popular");
 
   useEffect(() => {
-    const bg =
-      url.backdrop +
-      data?.results?.[Math.floor(Math.random() * 20)]?.backdrop_path;
-    setBackground(bg);
-  }, [data]);
+    const dataSets = [
+      topRatedMovies.data,
+      upcomingMovies.data,
+      nowPlayingMovies.data,
+      popularMovies.data,
+      topRatedTV.data,
+      onTheAirTV.data,
+      popularTV.data,
+    ];
+    const combinedResults = dataSets.reduce((acc, data) => {
+      return data ? acc.concat(data.results) : acc;
+    }, []);
 
-
+    if (combinedResults.length > 0) {
+      const bg =
+        url.backdrop +
+        combinedResults[Math.floor(Math.random() * combinedResults.length)]
+          ?.backdrop_path;
+      setBackground(bg);
+    }
+  }, [
+    topRatedMovies.data,
+    upcomingMovies.data,
+    nowPlayingMovies.data,
+    popularMovies.data,
+    topRatedTV.data,
+    onTheAirTV.data,
+    popularTV.data,
+  ]);
 
   const searchQueryHandler = (event) => {
-    if (event.key === "Enter" && query.length > 0) {      
-        navigate(`/search/${query}`);
-      
+    if (event.key === "Enter" && query.length > 0) {
+      navigate(`/search/${query}`);
     }
   };
 
@@ -37,22 +64,26 @@ const HeroBanner = () => {
     navigate(`/search/${query}`);
   };
 
-  
-
   return (
     <>
       <div className="heroBanner">
-        {!loading && (
-          <div className="backdrop-img">
-            <Img src={background} />
-          </div>
-        )}
+        {!topRatedMovies.loading &&
+          !upcomingMovies.loading &&
+          !nowPlayingMovies.loading &&
+          !popularMovies.loading &&
+          !topRatedTV.loading &&
+          !onTheAirTV.loading &&
+          !popularTV.loading && (
+            <div className="backdrop-img">
+              <Img src={background} />
+            </div>
+          )}
         <div className="opacity-layer"></div>
         <ContentWrapper>
           <div className="heroBannerContent">
             <span className="title">Welcome</span>
             <span className="subTitle">
-              Watch and explore Movies, TV shows, Anime and much more all for free.
+            Watch and explore Movies, TV shows, Anime and much more all for free.
             </span>
             <div className="searchInput">
               <input
@@ -60,12 +91,10 @@ const HeroBanner = () => {
                 placeholder="Search for a movie or tv show...."
                 onChange={(e) => setQuery(e.target.value)}
                 onKeyUp={searchQueryHandler}
-               
               />
               <button onClick={searchButtonClickHandler}>Search</button>
             </div>
             <div className="shareButtons">
-            
               <ShareBtn url={window.location.origin} />
             </div>
           </div>
