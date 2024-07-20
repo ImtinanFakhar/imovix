@@ -12,9 +12,9 @@ const serverUrls = {
   },
   VidsrcPro: (mediaType, id, season, episode) => {
     if (mediaType === "movie") {
-      return `https://vidsrc.to/embed/movie/${id}?autoplay=1&logo=0`;
+      return `https://vidsrc.pro/embed/movie/${id}?autoplay=1&logo=0`;
     } else if (mediaType === "tv") {
-      return `https://vidsrc.to/embed/tv/${id}/${season}/${episode}?autoplay=1&logo=0`;
+      return `https://vidsrc.pro/embed/tv/${id}/${season}/${episode}?autoplay=1&logo=0`;
     }
   },
   Multi: (mediaType, id, season, episode) => {
