@@ -42,7 +42,7 @@ const serverUrls = {
 };
 
 const VidSrcPlayer = ({ mediaType, id, season, episode }) => {
-  const [selectedServer, setSelectedServer] = useState("server1");
+  const [selectedServer, setSelectedServer] = useState("Vidsrc");
 
   const url = serverUrls[selectedServer](mediaType, id, season, episode);
 
