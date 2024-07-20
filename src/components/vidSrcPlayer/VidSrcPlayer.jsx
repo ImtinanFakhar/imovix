@@ -3,21 +3,21 @@ import PropTypes from "prop-types";
 import "./style.scss"; // Make sure to include relevant styles
 
 const serverUrls = {
-  server1: (mediaType, id, season, episode) => {
+  Vidsrc: (mediaType, id, season, episode) => {
     if (mediaType === "movie") {
       return `https://vidsrc.me/embed/movie/${id}?autoplay=1&logo=0`;
     } else if (mediaType === "tv") {
       return `https://vidsrc.me/embed/tv/${id}/${season}/${episode}?autoplay=1&logo=0`;
     }
   },
-  server2: (mediaType, id, season, episode) => {
+  VidsrcPro: (mediaType, id, season, episode) => {
     if (mediaType === "movie") {
       return `https://vidsrc.to/embed/movie/${id}?autoplay=1&logo=0`;
     } else if (mediaType === "tv") {
       return `https://vidsrc.to/embed/tv/${id}/${season}/${episode}?autoplay=1&logo=0`;
     }
   },
-  server3: (mediaType, id, season, episode) => {
+  Multi: (mediaType, id, season, episode) => {
     if (mediaType === "movie") {
       if (id.startsWith("tt")) { // Check if id is IMDb id
         return `https://multiembed.mov/directstream.php?video_id=${id}`;
@@ -32,7 +32,7 @@ const serverUrls = {
       }
     }
   },
-  server4: (mediaType, id, season, episode) => {
+  Smashy: (mediaType, id, season, episode) => {
     if (mediaType === "movie") {
       return `https://player.smashy.stream/movie/${id}`;
     } else if (mediaType === "tv") {
