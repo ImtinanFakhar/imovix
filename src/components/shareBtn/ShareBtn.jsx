@@ -14,11 +14,13 @@ const ShareBtn= ({url}) => {
         language: "en", // language of the buttons
         networks: [
         
-          'whatsapp',
+              'whatsapp',
               'telegram',
-              'messenger',
+              'facebook',
               'reddit',
-              'facebook'
+              'messenger'
+            
+              
               
         ],
         padding: 12, // padding within buttons (INTEGER)
