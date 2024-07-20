@@ -97,7 +97,7 @@ const HeroBanner = () => {
             <div className="shareButtons">
               <ShareBtn url={window.location.origin} />
               <span className="shareText">
-                If you enjoy the website, please consider <span className="highlight">sharing it with your friends <FaRegShareSquare />
+                If you enjoy the website, please consider, <span className="highlight">sharing it with your friends <FaRegShareSquare />
 
 </span>
               </span>
