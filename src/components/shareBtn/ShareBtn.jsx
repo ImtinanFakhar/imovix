@@ -15,10 +15,11 @@ const ShareBtn= ({url}) => {
         networks: [
         
               'whatsapp',
-              'telegram',
               'facebook',
               'reddit',
-              'messenger'
+              'messenger',
+              'telegram'
+            
             
               
               
