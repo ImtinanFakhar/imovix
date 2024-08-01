@@ -9,7 +9,8 @@ iMovix is a video streaming platform that showcases video content from various t
 # 🌟Features
 Clean and straightforward design - focused solely on the content you want.
 Built with React, Vite, and SCSS for a modern and responsive user interface.
-🌿 Philosophy
+
+# 🌿 Philosophy
 iMovix is designed to be straightforward and user-centric. We focus on providing essential features that are polished to perfection.
 Our goal is to create a lightweight streaming platform that prioritizes simplicity and usability.
 
@@ -21,7 +22,7 @@ As a static site, Server-Side Rendering (SSR) is not supported.
 To maintain low hosting costs, the number of proxied requests is limited.
 For affordability, content is not streamed through the proxy, so only streams without CORS protection are supported.
 
-#🔧 Running Locally for Development
+# 🔧 Running Locally for Development
 To get started locally, clone the repository. Then run the following commands in the root of the repository:
 
 ```bash
