@@ -1,6 +1,5 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { DiscussionEmbed } from 'disqus-react';
 import "./style.scss";
 import { Link } from "react-scroll";
 import { PlayIcon } from "./PlayBtn";
@@ -11,8 +10,7 @@ import Cast from "./cast/Cast";
 import Similar from "./carousels/Similar";
 import Recommendation from "./carousels/Recommendation";
 import VidSrcPlayer from "../../components/vidSrcPlayer/VidSrcPlayer";
-import ShareBtn from "../../components/shareBtn/ShareBtn";
-import TVShowDetails from "../tvShowDetails/TVShowDetails";
+
 
 const Details = () => {
   const { mediaType, id } = useParams();
@@ -21,12 +19,6 @@ const Details = () => {
     `/${mediaType}/${id}/credits`
   );
 
-  const disqusShortname = "imovix-online-1"; // Replace with your Disqus shortname
-  const disqusConfig = {
-    url: window.location.href,
-    identifier: id, // Use a unique identifier for the page
-    title: data?.results?.[0]?.title || "Details Page",
-  };
 
   return (
     <div>
@@ -41,14 +33,13 @@ const Details = () => {
       </div>
       <Cast data={credits?.cast} loading={creditsLoading} />
       {/* <VideosSection data={data} loading={loading} /> */}
-      <ShareBtn url={`${window.location.origin}/${mediaType}/${id}`} />
       <div id="vidSrcPlayer">
         {mediaType === "tv" ? (
           <TVShowDetails mediaType={mediaType} id={id} />
         ) : (
           <VidSrcPlayer mediaType={mediaType} id={id} />
         )}
-        <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+     
       </div>
       <Similar mediaType={mediaType} id={id} />
       <Recommendation mediaType={mediaType} id={id} />
