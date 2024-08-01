@@ -8,6 +8,7 @@ iMovix is a video streaming platform that showcases video content from various t
 
 # 🌟Features
 Clean and straightforward design - focused solely on the content you want.
+Responsive for both mobile and web.
 Built with React, Vite, and SCSS for a modern and responsive user interface.
 
 # 🌿 Philosophy
