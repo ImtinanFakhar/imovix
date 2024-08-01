@@ -19,29 +19,7 @@ import Contact from "./pages/contact/Contact";
 import DMCA from "./pages/dMCA/DMCA";
 import TermsOfUse from "./pages/termsOfUse/TermsOfUse";
 
-const tagManagerArgs = {
-  gtmId: "GTM-NM64GB8P", // Replace with your GTM ID
-};
 
-const AnalyticsComponent = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    logPageView();
-    TagManager.dataLayer({
-      dataLayer: {
-        event: "pageview",
-        page: {
-          path: location.pathname,
-          search: location.search,
-          title: document.title,
-        },
-      },
-    });
-  }, [location]);
-
-  return null;
-};
 
 const App = () => {
   const dispatch = useDispatch();
@@ -97,7 +75,7 @@ const App = () => {
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />
-      <AnalyticsComponent />
+   
       <Analytics />
     </BrowserRouter>
   );
