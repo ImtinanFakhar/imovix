@@ -3,7 +3,7 @@
 </p>
 This is the source code to iMovix, your ultimate video streaming experience.
 
-🎬 What is iMovix?
+# 🎬 What is iMovix?
 iMovix is a video streaming platform that showcases video content from various third-party sources within a user-friendly and visually appealing interface.
 
 # 🌟Features
@@ -37,6 +37,10 @@ To build the production files, run:
 npm run build
 ```
 
-
 # 📬 Contact
 [Email](mailto:imtinanfakhar879@gmail.com)
+
+## 🙏 Acknowledgements
+Thank you for checking out iMovix. Your interest and feedback help us improve and grow this project. Cheers! 🍻
+
+
