@@ -10,6 +10,7 @@ import Cast from "./cast/Cast";
 import Similar from "./carousels/Similar";
 import Recommendation from "./carousels/Recommendation";
 import VidSrcPlayer from "../../components/vidSrcPlayer/VidSrcPlayer";
+import TVShowDetails from "../tvShowDetails/TVShowDetails";
 
 
 const Details = () => {
