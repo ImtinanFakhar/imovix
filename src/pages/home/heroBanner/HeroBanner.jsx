@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./style.scss";
-import { FaRegShareSquare } from "react-icons/fa";
+
 import useFetch from "../../../hooks/useFetch";
 import Img from "../../../components/lazyLoadImage/Img";
 import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
-import ShareBtn from "../../../components/shareBtn/ShareBtn";
+
 
 const HeroBanner = () => {
   const [background, setBackground] = useState("");
@@ -94,14 +94,7 @@ const HeroBanner = () => {
               />
               <button onClick={searchButtonClickHandler}>Search</button>
             </div>
-            <div className="shareButtons">
-              <ShareBtn url={window.location.origin} />
-              <span className="shareText">
-                If you enjoy the website, please consider <span className="highlight">sharing it with your friends <FaRegShareSquare />
-
-</span>
-              </span>
-            </div>
+             
           </div>
         </ContentWrapper>
       </div>
