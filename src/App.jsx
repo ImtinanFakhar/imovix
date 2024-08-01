@@ -5,7 +5,6 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { fetchDataFromApi } from "./utils/api";
 import { getApiConfiguration, getGenres } from "./store/homeSlice";
-import { initGA, logPageView } from "./utils/analytics";
 import { Analytics } from "@vercel/analytics/react";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
