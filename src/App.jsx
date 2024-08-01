@@ -23,10 +23,6 @@ import TermsOfUse from "./pages/termsOfUse/TermsOfUse";
 const App = () => {
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    initGA();
-    TagManager.initialize(tagManagerArgs);
-  }, []);
 
   useEffect(() => {
     fetchApiConfig();
