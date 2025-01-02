@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
  <url>
-    <loc>https://www.imovix.online/</loc>
+    <loc>https://imovix.vercel.app/</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.imovix.online/searchResult</loc>
+    <loc>https://imovix.vercel.app/searchResult</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.imovix.online/details</loc>
+    <loc>https://imovix.vercel.app/details</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.imovix.online/explore</loc>
+    <loc>https://imovix.vercel.app/explore</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
  <url>
-    <loc>https://www.imovix.online/explore/movie</loc>
+    <loc>https://imovix.vercel.app/explore/movie</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
  <url>
-    <loc>https://www.imovix.online/explore/tv</loc>
+    <loc>https://imovix.vercel.app/explore/tv</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.imovix.online/contact</loc>
+    <loc>https://imovix.vercel.app/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.imovix.online/dmca</loc>
+    <loc>https://imovix.vercel.app/dmca</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.imovix.online/termsofuse</loc>
+    <loc>hhttps://imovix.vercel.app/termsofuse</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
