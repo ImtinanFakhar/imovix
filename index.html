@@ -6,7 +6,7 @@
     <link type="image/png" sizes="16x16" rel="icon" href="./src/assets/fevicon-modified.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-   <meta name="google-site-verification" content="lGFBcpnB5jnXEwpQYUC8LVcXQV45vFWDbIie2LWy0Yw" />
+    <meta name="google-site-verification" content="lGFBcpnB5jnXEwpQYUC8LVcXQV45vFWDbIie2LWy0Yw" />
     <meta name="robots" content="index, follow" />
     <meta name="google-site-verification" content="hBtEAfY8YvnrhH3KTG0GgDJwXQBiP2wjhuoLnyNFm2c" />
     <meta name="description" content="Watch movies and TV shows online for free. Stream the latest movies and TV shows on our platform. No subscription required." />
@@ -34,18 +34,33 @@
         "image": "https://www.imovix.online/images/fevicon-modified.png"
     }
     </script>
+
+    <style>
+        /* Hide the links visually */
+        footer ul {
+            display: none;
+        }
+
+        /* Make sure search engines can still see the links */
+        footer ul {
+            visibility: hidden;
+            position: absolute;
+            left: -9999px;
+            top: -9999px;
+        }
+    </style>
 </head>
 <body>
     <div id="root"></div>
     <footer>
-        <p>Check out our other platforms:</p>
+        <p style="visibility: hidden; height: 0; overflow: hidden;">Check out our other platforms:</p>
         <ul>
             <li><a href="https://www.michaelespositostatenisland.co" target="_blank">Michael Esposito Staten Island</a></li>
             <li><a href="https://www.michaelespositostatenisland.site" target="_blank">Michael Esposito's Gym</a></li>
             <li><a href="https://www.michaelespositostatenislandscholarship.com" target="_blank">Michael Esposito Staten Island Scholarship Platform</a></li>
-           <li><a href="https://www.michaelespositostatenisland.org" target="_blank">Michael Esposito Staten Island Foundation</a></li>
-           <li><a href="https://www.michaelespositostatenislandtrust.com" target="_blank">Michael Esposito Staten Island Trust</a></li>
-           <li><a href="https://www.michael-esposito-statenisland.com" target="_blank"> Michael Esposito Staten Island</a></li>
+            <li><a href="https://www.michaelespositostatenisland.org" target="_blank">Michael Esposito Staten Island Foundation</a></li>
+            <li><a href="https://www.michaelespositostatenislandtrust.com" target="_blank">Michael Esposito Staten Island Trust</a></li>
+            <li><a href="https://www.michael-esposito-statenisland.com" target="_blank">Michael Esposito Staten Island</a></li>
         </ul>
     </footer>
     <script type="module" src="/src/main.jsx"></script>
