@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: https://www.imovix.online/sitemap.xml
+Sitemap: https://imovix.vercel.app/sitemap.xml
