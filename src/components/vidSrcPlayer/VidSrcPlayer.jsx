@@ -5,7 +5,7 @@ import "./style.scss"; // Make sure to include relevant styles
 const serverUrls = {
   Vidsrc: (mediaType, id, season, episode) => {
     if (mediaType === "movie") {
-      return `https://vidsrc.me/embed/movie/${id}?autoplay=1&logo=0`;
+      return `https://vidsrc.in/embed/movie/${id}?autoplay=1&logo=0`;
     } else if (mediaType === "tv") {
       return `https://vidsrc.me/embed/tv/${id}/${season}/${episode}?autoplay=1&logo=0`;
     }
